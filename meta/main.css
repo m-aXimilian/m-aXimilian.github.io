@@ -7,12 +7,25 @@ html {
 
 body {
     font-size: 18px;
-    margin-bottom: 105px;
     background-color: #999;
    /* background-image: url("../imgs/heic0910e.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
+}
+
+h1, h2, h3 {
+    margin-left: 1%;
+}
+
+p {
+    margin-left: 1.2%;
+}
+
+img.center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 footer {
@@ -56,6 +69,34 @@ figcaption {
   font-style: italic;
   padding-bottom: 15px;
 }
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #A1283B;
+    color: white;
+  }
 
 /* from twbs docs */
 
