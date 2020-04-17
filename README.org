@@ -1,0 +1,99 @@
+
+#+TITLE: Pelletherm 2000
+
+| Pelletsheizkesseltype   | Pelletherm 2000                       |
+| Fabrikationsnummer      | 15.0077.L.14                          |
+| Baujahr                 | 2001                                  |
+| Nennwärmeleistung       | 15kW                                  |
+| Pelletstyp              | gem. Önorm M7135                      |
+| max. Betriebstemperatur | 95 °C                                 |
+| max. Betriebsdruck      | 3 bar                                 |
+| Kesselklasse            | 3                                     |
+| Wasserinhalt            | 115 Liter                             |
+| Anschluss               | 230V \vert 50Hz \vert 9,5A \vert 310W |
+
+-----
+
+* Reparatur 2020-04-04 :: Defekte Peripherie Treiberplatine
+
+
+*Ursache* \\
+Staub-Kurzschluss
+
+
+** Beschädigte Elemente
+
+*** Hardware Paltine
+
+**** Elementliste
+
+| N | Bauelement      | Beschadigt | Hersteller   | L[mm]        | B/D [mm]   | P [W] | Kommentar                                    |
+|---+-----------------+------------+--------------+--------------+------------+-------+----------------------------------------------|
+| 1 | Widerstand      | ja         |              | 11,5 +-  1,0 | 4,5 +- 0,5 |     2 | 100 \Omega +- 5% <<widerstand>>              |
+| 2 | Kondensator     | ja         | WIMA         |              |            |       | 10 nF (0,01 \mu F ; 275V ~ ; MP3-X2 <<10nf>> |
+| 2 | Kondensator     | vll        | WIMA         |              |            |       | 3,3 nF ; 250V ~ ; MP3-X1 Y2       <<3n3>>    |
+| 3 | Leistungsrelais | vll        | Schrack - TE |              |            |       | 1x [[acrelais][AC]] ; 2x [[dcrelais][DC]]                                |
+|   |                 |            |              |              |            |       |                                              |
+
+-----
+**** Bestellungen
+- [[file:bestellungen/reichelt_0.pdf][Reichelt 2020-04-05]]
+
+**** Bilder
+#+CAPTION: Übersicht Komplette Treiberplatine
+#+NAME: fig:overview
+[[file:fotos/platine/IMG_20200404_150912.jpg]]
+
+-----
+
+#+CAPTION: Durchgebrannter Widertand an eingebauter Treiberplatine
+#+NAME: fig:PL-mounted
+[[file:fotos/platine/IMG_20200404_144936.jpg]]
+
+-----
+
+#+CAPTION: Leistungsrelais Type
+#+NAME: fig:leistungsrelais
+[[file:fotos/platine/IMG_20200404_145006.jpg]]
+
+-----
+
+
+* Reparatur 2020-04-16 :: Fehlende Gerätespannung (230V AC) an Peripherie
+** Problem
+Nach Austausch des [[widerstand][100 \Omega Widerstands]], des [[10nf][10nF Kondensators]] und
+des [[3n3][3,3nF Kondensators]] fehlt die Spannung an den Peripheriegeräten
+(s. [[*Maßnahmen]]). 
+Vermutlich ist das [[acrelais][AC Relais]] direkt unterhalb des ausgetauschten
+[[10nf][10nF Kondensators]] beschädigt und den Geräten fehlt 230V.
+** Fehlerpuffer :: /Zündversuch Fehlgeschlagen/
+*** Maßnahmen
+    1. Test Zündung \\
+       - Ausbauen des Zünders
+       - Testen an Steckdose
+       - *Ergebnis:* Lüfter und Heizer am Zünder funktionieren
+    2. Test der Spannungsausgabe am Ausgang des Heizers an der
+       Treiberplatine
+       - Abklemmen d. Anschlüsse des Zünders
+       - Anschließen d. Multimeters an den Zündklemmen
+    #+CAPTION: Multimeter an Zünderklemmen
+    #+NAME: fig:zünderspannungstest
+    [[file:fotos/platine/IMG_20200417_105825.jpg]]
+    3. Test Handbetrieb
+       - WOS :: Ergebnis: Schaltkontakt hörbar, Antrieb bleibt aber aus
+       - Ascheschnecke :: Ergebnis: Schaltkontakt hörbar, Schnecke aus
+
+
+* Artikelliste
+
+** Leistungsrelais
+
+Details im [[file:daten/relais/schrack_rt310412.pdf][Datenblatt]]
+
+#+NAME: tab:relaix
+| Number                | Version                      | Contact arrangement   | Contact Material | Coil            | Version  |
+|-----------------------+------------------------------+-----------------------+------------------+-----------------+----------|
+| RT314730 <<acrelais>> | 16A; 5mm pinning; flux proof | 1 form C (CO) contact | Ag/Ni 90/10      | AC coil: 230VAC | standard |
+| RT314012 <<dcrelais>> | 16A; 5mm pinning; flux proof | 1 form C (CO) contact | Ag/Ni 90/10      | DC coil: 12VDC  | standard |
+
+
