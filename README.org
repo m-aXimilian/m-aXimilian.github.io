@@ -2,7 +2,7 @@
 #+TITLE: Pelletherm 2000
 
 | Pelletsheizkesseltype   | Pelletherm 2000                       |
-| Fabrikationsnummer      | 15.0077.L.14                          |
+| Fabrikationsnummer      | 15.00##.L.###                         |
 | Baujahr                 | 2001                                  |
 | Nennwärmeleistung       | 15kW                                  |
 | Pelletstyp              | gem. Önorm M7135                      |
@@ -103,7 +103,6 @@ Vermutlich ist das [[acrelais][AC Relais]] direkt unterhalb des ausgetauschten
    + ~Feuerr.überdruck Wächter nicht OK~
      
 * Artikelliste
-
 ** Leistungsrelais
 
 Details im [[file:daten/relais/schrack_rt310412.pdf][Datenblatt]]
