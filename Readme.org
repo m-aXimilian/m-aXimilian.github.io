@@ -18,3 +18,6 @@ npm start
 - [[https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages][navbar from file]]
 - [[https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/][bootstrap carousel]]
 - [[https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/][modal gallery]]
+
+* CI 
+| Font | font-family: 'Monoton', cursive; |
