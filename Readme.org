@@ -1,0 +1,23 @@
+#+title: pages
+
+* Usage 
+#+begin_src sh
+# get node moduels from package.jason
+npm i
+
+# Compile Sass
+npm run css-compile
+
+
+# Watches Sass for changes and starts a local server
+npm start
+#+end_src
+
+* Links
+- [[https://github.com/twbs/bootstrap-npm-starter][bootstrap with npm]]
+- [[https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages][navbar from file]]
+- [[https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/][bootstrap carousel]]
+- [[https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/][modal gallery]]
+
+* CI 
+| Font | font-family: 'Monoton', cursive; |

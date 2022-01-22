@@ -1,0 +1,7 @@
+<style>
+@font-face {
+    font-family: "Sample font";
+    src: url("data:application/font-woff;charset=utf-8;base64,...");
+}
+</style>
+<span>MK</span>
