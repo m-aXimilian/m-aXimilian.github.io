@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="icon" type="image/vnd.microsoft.icon" href="meta/favicon.ico">
+    <script type="text/javascript" src="scripts/generate-gallery.js"></script>
     <title>m-aXimilian
     </title>
 </head>
@@ -21,25 +22,40 @@
 
     <div class="container-fluid">
         <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/animals/animal-0001.jpg" class="img img-fluid" alt="Responsive image"
-                    data-target="#carouselExample" data-slide-to="0">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/animals/animal-0002.jpg" class="img img-fluid" alt="Responsive image" data-target="#carouselExample"
-                    data-slide-to="2">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/animals/animal-0003.jpg" class="img img-fluid" alt="Responsive image" data-target="#carouselExample"
-                    data-slide-to="3">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/animals/animal-0004.jpg" class="img img-fluid" alt="Responsive image" data-target="#carouselExample"
-                    data-slide-to="3">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <img src="img/animals/animal-0005.jpg" class="img img-fluid" alt="Responsive image" data-target="#carouselExample"
-                    data-slide-to="3">
+
+        </div>
+    </div>
+
+    <!-- Modal markup: https://getbootstrap.com/docs/4.4/components/modal/ -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Carousel markup: https://getbootstrap.com/docs/4.4/components/carousel/ -->
+                    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" id="carousel">
+                            
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
@@ -55,13 +71,29 @@
 
     <script src="assets/js/jquery.slim.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
-  
-  
+
     <script>
-      $(function () {
-        $("#nav-place").load("nav.html");
-      });
+        $(function () {
+            $("#nav-place").load("nav.html");
+        });
     </script>
-  </body>
-  
-  </html>
+
+    <script>
+        var inputs = [
+            'img/animals/animal-0001.jpg', 'img/animals/animal-0002.jpg',
+            'img/animals/animal-0003.jpg', 'img/animals/animal-0004.jpg',
+            'img/animals/animal-0005.jpg', 'img/animals/animal-0006.jpg',
+            'img/animals/animal-0007.jpg', 'img/animals/animal-0008.jpg',
+            'img/animals/animal-0009.jpg', 'img/animals/animal-0010.jpg',
+            'img/animals/animal-0011.jpg', 'img/animals/animal-0012.jpg',
+            'img/animals/animal-0013.jpg', 'img/animals/animal-0014.jpg',
+            'img/animals/animal-0015.jpg', 'img/animals/animal-0016.jpg',
+            'img/animals/animal-0017.jpg'
+        ]
+        generateGallery(inputs, "gallery", "carousel");
+    </script>
+
+
+</body>
+
+</html>
