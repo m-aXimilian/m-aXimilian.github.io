@@ -29,3 +29,5 @@ function generateGallery(inputs, _cont, _car) {
     car.firstElementChild.classList.add("active");
 }
 
+
+
